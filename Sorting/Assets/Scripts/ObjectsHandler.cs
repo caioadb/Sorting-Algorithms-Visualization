@@ -21,6 +21,8 @@ public class ObjectsHandler : MonoBehaviour
     bool reversed;
     public bool sorted;
     public float delayValue;
+    public bool restartSort;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,6 +90,7 @@ public class ObjectsHandler : MonoBehaviour
     // randomizes size of images
     public void Randomize()
     {
+        restartSort = true;
         sorted = false;
 
         if (fewUnique)

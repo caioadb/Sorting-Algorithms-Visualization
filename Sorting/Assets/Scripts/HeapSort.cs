@@ -19,6 +19,12 @@ public class HeapSort : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ObjectsHandler.objs.restartSort && notSorting == false)
+        {
+            PauseSort(false);
+            ObjectsHandler.objs.restartSort = false;
+            PauseSort(true);
+        }
         if (sort && notSorting && !ObjectsHandler.objs.sorted)
         {
             notSorting = false;
